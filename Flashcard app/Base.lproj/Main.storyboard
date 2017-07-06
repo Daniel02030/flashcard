@@ -61,6 +61,11 @@
                             <constraint firstItem="hfQ-TG-ZkO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xGm-Xz-A73"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerPickerView" destination="KmM-tJ-Ft6" id="tE9-Xb-YRG"/>
+                        <outlet property="questionLabel" destination="dFq-bh-7d4" id="yKl-73-2qe"/>
+                        <outlet property="questionTextView" destination="9wH-RP-KrT" id="dqi-0E-WQS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

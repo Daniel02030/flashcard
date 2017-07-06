@@ -12,6 +12,7 @@
 		94D3C7451F0C56F400169F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D3C7431F0C56F400169F30 /* Main.storyboard */; };
 		94D3C7471F0C56F400169F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D3C7461F0C56F400169F30 /* Assets.xcassets */; };
 		94D3C74A1F0C56F400169F30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D3C7481F0C56F400169F30 /* LaunchScreen.storyboard */; };
+		94D3C7521F0D63E200169F30 /* Flashcards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3C7511F0D63E200169F30 /* Flashcards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		94D3C7461F0C56F400169F30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94D3C7491F0C56F400169F30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D3C74B1F0C56F400169F30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D3C7511F0D63E200169F30 /* Flashcards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Flashcards.swift; path = ../Flashcards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		94D3C73E1F0C56F400169F30 /* Flashcard app */ = {
 			isa = PBXGroup;
 			children = (
+				94D3C7511F0D63E200169F30 /* Flashcards.swift */,
 				94D3C73F1F0C56F400169F30 /* AppDelegate.swift */,
 				94D3C7411F0C56F400169F30 /* ViewController.swift */,
 				94D3C7431F0C56F400169F30 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D3C7521F0D63E200169F30 /* Flashcards.swift in Sources */,
 				94D3C7421F0C56F400169F30 /* ViewController.swift in Sources */,
 				94D3C7401F0C56F400169F30 /* AppDelegate.swift in Sources */,
 			);
@@ -267,6 +271,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.id.daniel.Flashcard-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -279,6 +284,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.id.daniel.Flashcard-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -301,6 +307,7 @@
 				94D3C7501F0C56F400169F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
