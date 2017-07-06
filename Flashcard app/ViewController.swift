@@ -11,10 +11,26 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
     
     
-    
+    //Outlets
     @IBOutlet weak var questionTextView: UITextView!
     @IBOutlet weak var answerPickerView: UIPickerView!
     @IBOutlet weak var questionLabel: UILabel!
+    
+    //Actions
+    @IBAction func submitButtonPressed(_ sender: Any) {
+        var alert: UIAlertController
+        if CardCollection.instance.checkAnswer(selectedAnswer: answerPickerView.selectedRow(inComponent: 0)){
+            // answer is correct
+            alert = UIAlertController(title: "Correct", message: "Yee", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Yee yay", style: UIAlertActionStyle.default, handler: nil))
+        } else {
+            // anser is incorrect
+            alert = UIAlertController(title: "Inorrect", message: "U stupid", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "How could this happen to me", style: UIAlertActionStyle.default, handler: nil))
+        }
+        present(alert, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

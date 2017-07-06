@@ -36,7 +36,7 @@ class CardCollection {
     
     private init() {
         cards = [Flashcard(question: "Test question", options: ["True", "False"]),
-                Flashcard(question: "What's the capitol of Washington state?", options:["Olympia", "Tacoma", "Seattle", "Spokane"]),
+                Flashcard(question: "What's the capital of Washington state?", options:["Olympia", "Tacoma", "Seattle", "Spokane"]),
                 Flashcard(question: "Where is iD Tech's headquarters?", options:["Campbell, CA", "Albequerque, NM", "Beijing, CN"])]
         
         currentIndex = 0

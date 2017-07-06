@@ -49,6 +49,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q91-ho-Btp">
                                         <rect key="frame" x="0.0" y="617" width="343" height="30"/>
                                         <state key="normal" title="Final answer!"/>
+                                        <connections>
+                                            <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0e5-M5-ado"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
