@@ -99,6 +99,7 @@
 				TargetAttributes = {
 					94D3C73B1F0C56F400169F30 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = Y286S9WA55;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -266,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y286S9WA55;
 				INFOPLIST_FILE = "Flashcard app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.id.daniel.Flashcard-app";
@@ -279,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y286S9WA55;
 				INFOPLIST_FILE = "Flashcard app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.id.daniel.Flashcard-app";

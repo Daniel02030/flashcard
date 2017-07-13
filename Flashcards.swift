@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import GameKit
 
 // The question, option and answer class is created here (Flashcard)
 class Flashcard {
@@ -19,6 +19,8 @@ class Flashcard {
         self.question = question
         self.options = options
         self.correctAnswer = options[0]
+        
+        self.options = shuffle(list: options)
     }
 }
 
@@ -35,11 +37,20 @@ class CardCollection {
     
     
     private init() {
-        cards = [Flashcard(question: "Test question", options: ["True", "False"]),
-                Flashcard(question: "What's the capital of Washington state?", options:["Olympia", "Tacoma", "Seattle", "Spokane"]),
-                Flashcard(question: "Where is iD Tech's headquarters?", options:["Campbell, CA", "Albequerque, NM", "Beijing, CN"])]
+        cards = [Flashcard(question: "What is the capital of Denmark",
+                           options: ["Copenhagen", "Paris", "Sweden"]),
+                Flashcard(question: "What isn't a Danish letter?",
+                          options:["ö", "æ", "ø", "å"]),
+                Flashcard(question: "Where is the city Odense?",
+                          options:["Fyn", "Sjæland", "Jyland"]),
+                Flashcard(question: "Which language does most Danish people not understand?",
+                          options:["Finnish", "Sweedish", "Norwegian"]),
+                Flashcard(question: "Where is the city Odense?",
+                          options:["Fyn", "Sjæland", "Jyland"])]
         
         currentIndex = 0
+        
+        currentCard.options = shuffle(list: currentCard.options)
     }
 
 
@@ -47,10 +58,19 @@ class CardCollection {
         currentIndex += 1
         if currentIndex >= cards.count {
             currentIndex = 0
+            cards = shuffle(list:cards)
         }
+        currentCard.options = shuffle( list: currentCard.options)
     }
     
     func checkAnswer(selectedAnswer: Int) -> Bool {
         return currentCard.options[selectedAnswer] == currentCard.correctAnswer
     }
+    
+    
+    
+}
+
+func shuffle<T>(list: [T]) -> [T] {
+    return GKRandomSource.sharedRandom().arrayByShufflingObjects(in: list) as! [T]
 }

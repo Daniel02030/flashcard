@@ -25,10 +25,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             alert.addAction(UIAlertAction(title: "Yee yay", style: UIAlertActionStyle.default, handler: nil))
         } else {
             // anser is incorrect
-            alert = UIAlertController(title: "Inorrect", message: "U stupid", preferredStyle: UIAlertControllerStyle.alert)
+            alert = UIAlertController(title: "Incorrect", message: "U stupid", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "How could this happen to me", style: UIAlertActionStyle.default, handler: nil))
         }
         present(alert, animated: true)
+        
+        CardCollection.instance.nextQuestion()
+        
+        setupCardUI()
     }
     
     
@@ -51,6 +55,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         questionTextView.text = CardCollection.instance.currentCard.question
     
         questionLabel.text = "Question \(CardCollection.instance.currentIndex + 1) /\(CardCollection.instance.cards.count)"
+        
+        answerPickerView.reloadAllComponents()
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
